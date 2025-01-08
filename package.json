@@ -7,8 +7,12 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.1.3",
-    "body-parser": "^1.20.2",
-    "dotenv": "^16.4.1",
-    "express": "^4.18.2"
-  }
-} 
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "description": "*💡\"nyAI: Empowering Your Legal Journey with Lawyer Assist\"💡*",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
