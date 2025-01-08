@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --d1-color: #000814;
+    --d2-color: #1A1A1A;
+    --l1-color: #F5F5F5;
+    --l2-color: #ffc35b;
+    --l3-color: #5A5A5A;
+}
+body{
+    width: 100%;
+    height: 99.5vh;
+    background: var(--d1-color);
+}
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    object-fit: cover;
+}
+.container-lawyer{
+    background: url(../LawPicEdited.jpeg) no-repeat;
+    background-size: cover;
+}
+.container-client{
+    background: url(../ClientBackground.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+.box{
+    color: var(--l2-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-lawyer{
+    grid-column: 2/4;
+}
+.box-client{
+    grid-column: 1/2;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 8px 0 rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+  
+
+.title{
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+.title-lawyer {
+    color: var(--l2-color);
+}
+.title-client {
+    color: black;
+}
+
+
+.title-lawyer::before,.title-lawyer::after,.title-client::before,.title-client::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: rgb(0, 255, 238);
+}
+
+.title-lawyer::before,.title-client::before {
+    width: 18px;
+    height: 18px;
+    background-color: rgb(60, 255, 0);
+}
+
+.title-lawyer::after,.title-client::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.message, .signin {
+    color: var(--l1-color);
+    font-size: 14px;
+}
+
+.signin {
+    text-align: center;
+}
+
+.signin a {
+    color: var(--l2-color);
+}
+
+.signin a:hover {
+    text-decoration: underline var(--l2-color);
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.form label .input:valid + span {
+    color: rgb(0, 191, 0);
+}
+
+.submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 16px;
+    transform: .3s ease;
+    background-color: rgb(212, 212, 212);
+    box-shadow: 2px 2px #000000;
+}
+
+.submit:hover {
+    transform: scale(0.99);
+    color: rgb(255, 255, 255);
+    background-color: rgb(212, 212, 212);
+    box-shadow: 2px 2px #000000;
+    background-color: rgb(55, 55, 55);
+    box-shadow: 1px 1px 5px rgb(145, 145, 145);
+}
+
+    @keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 34px;
+   }
+   
+.switch input {
+    display: none;
+}
+   
+.slider-lawyer {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+.slider-lawyer {
+    background-color: black;
+}
+.slider-client {
+    background-color: #a1a1a1;
+}
+   
+.slider-lawyer:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+.slider-client:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    right: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+   
+input:checked + .slider-lawyer {
+    background-color: #a1a1a1;
+}
+   
+input:focus + .slider-lawyer {
+    box-shadow: 0 0 1px #ffffff;
+}
+   
+input:checked + .slider-lawyer:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(85px);
+}
+
+input:checked + .slider-client:before {
+    -webkit-transform: translateX(-52px);
+    -ms-transform: translateX(-52px);
+    transform: translateX(-85px);
+}
+   
+/*------ ADDED CSS ---------*/
+.slider-lawyer:after {
+    content: 'Lawyer';
+    color: white;
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Verdana, sans-serif;
+}
+
+.slider-client:after {
+    content: 'Client';
+    color: white;
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Verdana, sans-serif;
+}
+   
+input:checked + .slider-lawyer:after {
+    content: 'Client';
+}
+
+input:checked + .slider-client:after {
+    content: 'Lawyer';
+}
+
+.container-lawyer, .container-client {
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+.container-lawyer, .container-client {
+    opacity: 1;
+    height: 100%;
+    display: grid;
+}
+
+.hidden{
+    display: none;
+} 
+
+.submit{
+    height: 100%;
+    width: 100px;
+    margin-left: 35%;
+}

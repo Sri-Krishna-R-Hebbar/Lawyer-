@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAWYER ASSIST</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body>
+    <nav class="menu">
+        <div class="logo"><a href="../../Home/law-office-templates/index.html">LAWYER ASSIST</a></div>
+        <div class="content">
+            <ul>
+                <li class="home-list">
+                    <a href="../../Home/law-office-templates/index.html">Home</a> 
+                </li>
+                <a href="https://calendar.google.com/"><li class="update-list"><button class="btn-upd">Schedule G-Meet</button></li></a>
+                <li>
+                    <button id="btn-back-arrow" class="btn btn-arr">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="white">
+                            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+                        </svg>  
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="screen1 layout">
+            <div class=" child-layout-1">
+                <div class="sub-child-layout pic-layout">
+                    <img id="lawyer-pic" class="lawyer-pic" src="" alt="Profile pic">
+                </div>
+                <div class="sub-child-layout det-layout">
+                    <h1 id="lawyer-name"></h1>
+                    <div class="wrapper">
+                        <div class="sub-layout">
+                            <h2><span class="txt-color">Personal Information</span></h2>
+                            <h3><span class="txt-color">DOB : </span><span id="dob"></span></h3>
+                            <h3><span class="txt-color">State : </span><span id="lawyer-state"></span></h3>
+                            <h3><span class="txt-color">Location : </span><span id="lawyer-location"></span></h3>
+                            <h3><span class="txt-color">Experience : </span><span id="experience-years"></span></h3>
+                        </div>
+                        <div class="sub-layout">
+                            <h2><span class="txt-color">Professional Information</span></h2>
+                            <h3><span class="txt-color">Area of Jurisdiction : </span><span id="area-of-jurisdiction"></span></h3>
+                            <h3><span class="txt-color">Barrister ID : </span><span id="barrister-id"></span></h3>
+                            <h3><span class="txt-color">Number of cases handled : </span><span id="cases-handled"></span></h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sub-child-layout contact-layout">
+                    <h1>Contact Details</h1>
+                    <div class="sub-layout">
+                        <h3><span class="txt-color">Phone : </span><span id="phone"></span></h3>
+                        <h3><span class="txt-color">Email : </span><a href="#"><span id="email"></span></a></h3>
+                    </div>
+                    <div class="pre-ratings">
+                        <h2>Rate : 5/5</h2>
+                        <div class="rate">
+                            <img class="stars" src="SVG/Ratings.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--  -->
+            <div class="child-layout-2">
+                <div class="sub-layout-2 graph-layout">
+                    <h1>Success Rate</h1>
+                    <div id="success-rate-chart"></div>
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                    </div>
+                    <span id="progress_rate"></span>
+                </div>
+                <div class="sub-layout-2 pre-feedback">
+                    <h1>Client Reviews</h1> 
+                    <div class="feedback-layout">
+
+                    </div>
+                </div>
+                <div class="sub-layout-2 ratings">
+                    <div>
+                        <h2>Rate : 5/5</h2>
+                        <div class="rate">
+                            <img class="stars" src="SVG/Ratings.png" alt="">
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <h1>Contact Details</h1>
+                        <h3><span class="txt-color">Phone : </span>9876543210</h3>
+                        <h3><span class="txt-color">Email : </span><a href="#">xyz@gmail.com</a></h3>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="sub-layout-2 post-feedback">
+                <h1>Client Reviews</h1> 
+                <div class="post-feedback-layout">
+
+                </div>
+            </div>
+        </div>
+        <div class="screen2">
+            <div class="s2-pic-layout flex">
+                <img class="s2-pic" src="SVG/Lawyer Profile Pic.jpg" alt="">
+                <div class="s2-personal-info flex">
+                    <hr>
+                    <h1>⚖️Dr. Shivkumar R Hegde</h1>
+                    <hr>
+                    <h2>Personal Information</h2>
+                    <h3>DOB : <span>12/08/1970</span></h3>
+                    <h3>State : <span>Karnataka</span></h3>
+                    <h3>Location : <span>Bangalore</span></h3>
+                    <h3>Experience : <span>25 years</span></h3>
+                </div>
+                <hr>
+                <div class="s2-legal-info flex">
+                    <h2>Professional Information</h2>
+                    <h3>Area of Jurisdiction : <span>Civil</span></h3>
+                    <h3>Barrister ID : <span>BID2077KA</span></h3>
+                    <h3>Number of cases handled : <span>150</span></h3>
+                    <h3>Retirement : <span>12/08/2035</span></h3>
+                </div>
+                <hr>
+                <div class="s2-graph flex">
+                    <h2>Success rate</h2>
+                    <canvas id="success-rate-chart" width="400" height="400"></canvas>
+                </div>
+                <hr>
+                <div class="s2-ratings flex">
+                    <h2>Rate : 5/5</h2>
+                    <img class="s2-stars" src="SVG/Ratings.png" alt="">
+                </div>
+                <hr>
+                <div class="s2-contact flex">
+                    <h2>Contact Details</h2>
+                    <h3>Email : <span>xyz@gmail.com</span></h3>
+                    <h3>Phone : <span>9876543210</span></h3>
+                </div>
+                <hr>
+                <div class="s2-review flex">
+                    <h2>Client review</h2>
+                    <div class="s2-feedback">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="meeting-link">
+        
+    </div>
+    <script src="lawProfile.js"></script>
+</body>
+</html>
